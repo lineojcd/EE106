@@ -26,7 +26,29 @@ catkin_make
 rosrun kobuki_ftdi create_udev_rules
 ```
 
-# Run Kobuki base
+# Launch Kobuki in Rviz
+```
+roslaunch kobuki_description view_model.launch
+```
+
+# Launch Kobuki in Gazebo
+Here are the steps to install Kobuki base in Gazebo：
+```
+cd ~/catkin_ws/src
+git clone https://github.com/yujinrobot/kobuki_desktop.git
+cd kobuki_desktop/
+rm -r kobuki_qtestsuite
+cd ~/catkin_ws
+catkin_make (or catkin build depends on your setting)
+source ~/.bashrc
+
+## Next, you can launch your Kobuki model in gazebo
+roslaunch kobuki_gazebo kobuki_empty_world.launch
+## In another terminal, run the below line to control the robot through keyboard
+roslaunch kobuki_keyop keyop.launch
+```
+
+# Run Kobuki base in Real
 In your first terminal, run the command below:
 ```
 roslaunch kobuki_node minimal.launch
@@ -36,3 +58,4 @@ In your second terminal, run the command below:
 roslaunch kobuki_keyop keyop.launch
 ```
 This will allow you to control the Kobuki base through keyboard controller
+
