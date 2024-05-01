@@ -26,7 +26,7 @@ catkin_make
 rosrun kobuki_ftdi create_udev_rules
 ```
 
-# Launch Kobuki in Rviz
+# Launch Kobuki in Rviz (Optional)
 ```
 roslaunch kobuki_description view_model.launch
 ```
@@ -44,11 +44,19 @@ source ~/.bashrc
 
 ## Next, you can launch your Kobuki model in gazebo
 roslaunch kobuki_gazebo kobuki_empty_world.launch
-## In another terminal, run the below line to control the robot through keyboard
+## In another terminal, run the below line to control the robot through keyboard controller
 roslaunch kobuki_keyop keyop.launch
 ```
 
-# Run Kobuki base in Real
+# Control Kobuki through Python API
+Write your own code, and publish the Twist message through the topic "/mobile_base/commands/velocity" to move the Kobuki base. Before run your own code, do not forget to grant permission for your code by:
+```
+chmod 777 your_code_file_name.py
+# Then run you code:
+rosrun package_name your_code_file_name.py
+```
+
+# Run Kobuki base in Real world
 In your first terminal, run the command below:
 ```
 roslaunch kobuki_node minimal.launch
