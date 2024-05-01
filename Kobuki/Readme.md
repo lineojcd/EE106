@@ -48,6 +48,9 @@ roslaunch kobuki_gazebo kobuki_empty_world.launch
 roslaunch kobuki_keyop keyop.launch
 ```
 
+# Launch Kobuki with RPLidar in Gazebo
+Please check [here](https://github.com/lineojcd/EE106/tree/main/RPLidar).
+
 # Control Kobuki through Python API
 Write your own code, and publish the Twist message through the topic "/mobile_base/commands/velocity" to move the Kobuki base. Before run your own code, do not forget to grant permission for your code by:
 ```
