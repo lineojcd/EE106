@@ -1,3 +1,4 @@
+# Install Kobuki base
 Here are the steps to install Kobuki base on Ubuntu20.04 and ROS noetic :
 ```
 sudo apt-get install ros-noetic-kobuki-core
@@ -24,3 +25,14 @@ cd ~/catkin_ws/
 catkin_make
 rosrun kobuki_ftdi create_udev_rules
 ```
+
+# Run Kobuki base
+In your first terminal, run the command below:
+```
+roslaunch kobuki_node minimal.launch
+```
+In your second terminal, run the command below:
+```
+roslaunch kobuki_keyop keyop.launch
+```
+This will allow you to control the Kobuki base through keyboard controller
