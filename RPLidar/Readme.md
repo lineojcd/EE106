@@ -11,6 +11,7 @@ source devel/setup.bash
 
 # Mount RPLidar onto Kobuki base
 In this file ~/catkin_ws/src/kobuki/kobuki_description/urdf/kobuki_standalone.urdf.xacro
+
 Remove the previous content and use the below content:
 ```
 <?xml version="1.0"?>
