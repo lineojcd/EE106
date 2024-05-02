@@ -60,7 +60,7 @@ rosrun package_name your_code_file_name.py
 ```
 
 # Run Kobuki base in Real world
-In your first terminal, run the command below:
+When you have real Kobuki base and want to run it in the real world, you can open up the first terminal and run the command below:
 ```
 roslaunch kobuki_node minimal.launch
 ```
