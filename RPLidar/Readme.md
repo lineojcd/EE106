@@ -97,6 +97,7 @@ rosrun package_name your_code_file_name.py
 ```
 
 # Run RPLidar A2 M8 in Real world
+When you have real RPLidar and want to run it in the real world, you can run the command below:
 ```
 cd ~/catkin_ws/src
 git clone https://github.com/Slamtec/rplidar_ros.git
